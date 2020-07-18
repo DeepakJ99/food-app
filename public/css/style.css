@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    --primary:#f54933;
+    --primary-bg:grey;
+    --primary-text:white;
+    --comp :#161b69;
+    font-family: sans-serif;
+    font-family: 'QuickSand',sans-serif;
+}
+body{
+    margin:0;
+}
+.loader-cont{
+    position: fixed;
+    z-index: 100;
+    height:100vh;
+    width:100vw;
+    background-color: var(--primary);
+    color:var(--primary-text);
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+#loader{
+  
+    height:12vh;
+    width: 12vh;
+    margin-bottom: 20vh;
+    display:grid;
+    grid-template-rows:60% 30% 10%;
+}
+#loader #ut{
+    position: relative;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: flex-end;
+    
+}
+#loader #ut .actb{
+    height:10%;
+    align-self: flex-start;
+    width:10%;
+    border-right:solid 2px white;
+    border-radius: 10px;
+}
+#loader #ut .actual-cont{
+    height:90%;
+    width:80%;
+    top:10%;
+    border:solid 2px white;
+    border-radius: 0px 0px 10px 10px;
+}
+#loader #ut .acta{
+    height:10%;
+    align-self: flex-start;
+    width:10%;
+    border-left:solid 2px white;
+    border-radius: 10px;
+}
+
+#loader #air-space{
+    height:100%;
+    position: relative;
+    width:100%;
+}
+
+#loader #air-space .bubble{
+    position:absolute;
+    height:0.6px;
+    width:0.6px;
+    bottom:0;
+    background-color: transparent;
+    border:solid 1px white;
+    border-radius: 50%;
+    animation:riseUp 1s linear;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes riseUp{
+    0%{
+        bottom:0%;
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        bottom:100%;
+        opacity:0;
+    }
+}
+.bubble:first-child{
+    left:20%;
+    height:7px;
+    width:7px;
+    z-index: 100;
+}
+
+.bubble:nth-child(2){
+    left:60%;
+    z-index: 101;
+}
+
+.bubble:nth-child(3){
+    left:30%;
+    height: 8.5px;
+    width: 8.5px;
+    z-index: 102;
+}
+
+.bubble:nth-child(4){
+    left:40%;
+    height: 5px;
+    width: 5px;
+    z-index: 103;
+}
+
+.bubble:nth-child(5){
+    left:70%;
+    z-index: 104;
+ 
+}
+
+.floor{
+    height:100%;
+    width:100%;
+    border-bottom: solid 2px white;;
+}
+
+.app-name{
+    margin-bottom: 5vh;
+    letter-spacing: 2px;
+    font-size: 10px;
+    width:80vw;
+    text-align: center;
+}
+#main{
+    background-color: var(--primary-bg);
+    height:100vh;
+    width: 100vw;
+    display: none;
+}
+
+#main .login-page{
+    height:100vh;
+    position: fixed;
+    width:100vw;
+    background-position: center;
+    background-size: cover;
+}
+#main .login-page::before{
+    content:'';
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index: 105;
+    opacity: 0.5;
+    background-color: black ;
+}
+#main .login-page .login-form{
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    position: absolute;
+    width:100vw;
+    height:20vh;
+    bottom:0;
+    background-color: white;
+    z-index: 106;
+    display: grid;
+    grid-template-columns: 10% 80% 10% ;
+
+}
+#main .login-page .login-form:nth-child(2){
+    z-index:105;
+    opacity: 1;
+}
+#main .login-page .login-form-1{
+    height:100%;
+    width:100%;
+    display: grid;
+    grid-template-rows: 30% 40% 10%;
+}
+
+#main .login-page .login-form-1 .main-div{
+    height:100%;
+    width:100%;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 15% 60% 15%;
+}
+#main .login-page .login-form-1 .description-login{
+    display: flex;
+    color:black;
+    margin-bottom: 2%;
+    justify-content: flex-start;
+    font-size: 12px;
+    align-items: flex-end;
+}
+#main .login-page .login-form-1 .need-help-login{
+    display: flex;
+    margin-right: 10%;;
+    margin-top: 2%;
+    color:var(--primary);
+    justify-content: flex-end;
+    font-size: 10px;
+    align-items: flex-start;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.login-form-1 .main-div #login-form-form{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:solid 1px grey;
+    border-bottom: solid 1px grey;
+}
+.login-form-1 form input{
+    font-size: 15px;
+    padding:0px 10%;
+    width:80%;
+    height: 90%;
+    border: none;   
+}
+.login-form-1 .otp-enter-form{
+    display: grid;
+    height:100%;
+    width:100%;
+    align-items: center;
+   
+    grid-template-columns: 15% 2% 10% 10% 10% 10% 10% 10% 2% 15%;
+    justify-content: space-around;
+
+}
+.login-form-1 .otp-enter-form input{
+    background-color: white;
+    width:80%;
+    height:70%;
+    border:none;
+    font-size: 20px;;
+    text-align: center;
+    border-radius: 5px;;
+    display: flex;
+    border:solid 1px grey;
+    justify-content: center;
+    align-items: center;box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.05);
+
+}
+.login-form-1 .otp-enter-form input:focus{
+    border:solid 2px var(--primary);
+}
